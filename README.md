@@ -136,7 +136,6 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
 
 11.  Edit the `HomeController` class found in **Controllers/HomeController.cs** and add the following method to the class. This method returns the **Chat** view that you will create in a later step.
 
-<div class="codeHeader lang-csharp">   
 
 <div class="labelHolder">C#</div>
 
@@ -146,7 +145,7 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
             return View();
         }
 
-</div>
+
 
 12.  Right-click the **Views/Home** folder, and select **Add... | View**.
 13.  In the **Add View** dialog, name the new view **Chat**.
@@ -158,10 +157,7 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
 ##### Important
 
 >    When you add SignalR and other script libraries to your Visual Studio project, the Package Manager might install a version of the SignalR script file that is more recent than the version shown in this topic. Make sure that the script reference in your code matches the version of the script library installed in your project.
-
-
-<div class="codeHeader lang-cshtml">
-    
+  
 
 <div class="labelHolder">cshtml</div>
 
@@ -217,7 +213,6 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
             </script>
         }
         
-</div>
 
 15.  **Save All** for the project.
 
@@ -242,7 +237,7 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
 
 6.  The following screen shot shows the chat application running in a browser.
 
-    ![Chat browsers](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc/_static/image9.png)
+![Chat browsers](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc/_static/image9.png)
 
 7.  In **Solution Explorer**, inspect the **Script Documents** node for the running application. This node is visible in debug mode if you are using Internet Explorer as your browser. There is a script file named **hubs** that the SignalR library dynamically generates at runtime. This file manages the communication between jQuery script and server-side code. If you use a browser other than Internet Explorer, you can also access the dynamic **hubs** file by browsing to it directly, for example [http://mywebsite/signalr/hubs](http://mywebsite/signalr/hubs).
 
@@ -262,8 +257,6 @@ The **Send** method demonstrates several hub concepts :
 *   Use the **Microsoft.AspNet.SignalR.Hub.Clients** property to access all clients connected to this hub.
 *   Call a function on the client (such as the `addNewMessageToPage` function) to update clients.
 
-<div class="codeHeader lang-csharp">   
-
 <div class="labelHolder">C#</div>
 
 
@@ -275,7 +268,6 @@ The **Send** method demonstrates several hub concepts :
             }
         }
 
-</div>
 
 ### SignalR and jQuery
 
@@ -283,15 +275,11 @@ The **Chat.cshtml** view file in the code sample shows how to use the SignalR jQ
 
 The following code declares a reference to a hub proxy.
 
-<div class="codeHeader lang-javascript">
-
-
-
 <div class="labelHolder">JavaScript</div>
 
     var chat = $.connection.chatHub;
 
-</div>
+
 
 ##### Note
 
@@ -299,8 +287,6 @@ The following code declares a reference to a hub proxy.
 
 
 The following code shows how to create a callback function in the script. The hub class on the server calls this function to push content updates to each client. The optional call to the `htmlEncode` function shows a way to HTML encode the message content before displaying it in the page, as a way to prevent script injection.
-
-<div class="codeHeader lang-html">
 
 <div class="labelHolder">html</div>
 
@@ -310,7 +296,7 @@ The following code shows how to create a callback function in the script. The hu
             + '</strong>: ' + htmlEncode(message) + '</li>');
     };
 
-</div>
+
 
 The following code shows how to open a connection with the hub. The code starts the connection and then passes it a function to handle the click event on the **Send** button in the Chat page.
 
@@ -318,8 +304,6 @@ The following code shows how to open a connection with the hub. The code starts 
 
 > This approach ensures that the connection is established before the event handler executes.
 
-
-<div class="codeHeader lang-javascript">
 
 <div class="labelHolder">JavaScript</div>
 
@@ -332,6 +316,5 @@ The following code shows how to open a connection with the hub. The code starts 
         });
     });
 
-</div>
 
 ### [Reference](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc)
