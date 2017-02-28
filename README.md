@@ -91,8 +91,6 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
 
 9.  Replace the code in the **ChatHub** class with the following code.
 
-<div class="codeHeader lang-csharp">  
-
 <div class="labelHolder">C#</div>
 
 
@@ -110,8 +108,6 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
                 }
             }
         }
-
-</div>
 
 10.  Create a new class called Startup.cs. Change the contents of the file to the following.
   
