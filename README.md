@@ -114,11 +114,9 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
 </div>
 
 10.  Create a new class called Startup.cs. Change the contents of the file to the following.
-
-<div class="codeHeader lang-csharp">    
+  
 
 <div class="labelHolder">C#</div>
-
 
         using Owin;
         using Microsoft.Owin;
@@ -135,7 +133,6 @@ This section shows how to create an ASP.NET MVC 5 application, add the SignalR l
             }
         }
 
-</div>
 
 11.  Edit the `HomeController` class found in **Controllers/HomeController.cs** and add the following method to the class. This method returns the **Chat** view that you will create in a later step.
 
